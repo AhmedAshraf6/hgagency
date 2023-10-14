@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import banner1 from '../assets/banner4.png';
 import banner2 from '../assets/banner3.png';
 import vid from '../assets/wolf2.mp4';
 import { Carousel, Navbar } from '../components';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+
 const Landing = () => {
+  const [loading, setLoading] = useState(true);
   return (
     // <div className='carousel w-full'>
     //   <div id='slide1' className='carousel-item relative w-full'>
@@ -52,15 +54,18 @@ const Landing = () => {
     //   </div>
     // </div>
 
-    <div className='relative h-screen bg-red-300 grid place-items-center'>
+    <div className='relative h-screen grid place-items-center'>
+      {loading && <div>loading...</div>}
       <video
         autoPlay
         loop
         muted
-        playsInline
+        type={'video/mp4'}
         className='video w-full h-full object-cover absolute'
         src={vid}
+        onLoadedData={() => setLoading(false)}
       ></video>
+
       <div className='absolute left-0 top-0 inset-0 bg-black opacity-50' />
       <Navbar />
       <div className='contetnt z-10  max-w-sm mx-3 text-center'>
