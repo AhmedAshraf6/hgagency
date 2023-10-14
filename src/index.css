@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .align-element {
+    @apply mx-auto max-w-7xl px-8;
+  }
+}
+.swiper-button-prev {
+  left: auto;
+  right: 14px;
+  margin-top: 32px;
+}
+
+body {
+  height: 3000px;
+}
