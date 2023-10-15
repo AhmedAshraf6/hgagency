@@ -8,7 +8,6 @@ import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 const Landing = () => {
   return (
     <div className='relative h-screen grid place-items-center'>
-      {loading && <div>loading...</div>}
       <video
         autoPlay
         loop
