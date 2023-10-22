@@ -4,9 +4,9 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
 
-const Navbar = () => {
+const Navbar = ({ extraClassess }) => {
   return (
-    <nav className='text-primary w-full absolute top-0 left-0'>
+    <nav className={`text-primary w-full ${extraClassess}`}>
       <div className='navbar align-element '>
         <div className='navbar-start'>
           {/* Title */}

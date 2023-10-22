@@ -9,3 +9,8 @@ export { default as MovingSection } from './MovingSection';
 export { default as ProjeressSection } from './ProjeressSection';
 export { default as TwoTitles } from './TwoTitles';
 export { default as Footer } from './Footer';
+export { default as PageBanner } from './PageBanner';
+export { default as ProjressSection2 } from './ProjressSection2';
+export { default as WhyChooseUs } from './WhyChooseUs';
+export { default as AllProjects } from './AllProjects';
+export { default as ContactInfo } from './ContactInfo';

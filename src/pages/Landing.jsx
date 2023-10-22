@@ -27,7 +27,7 @@ const Landing = () => {
         ></video>
 
         <div className='absolute left-0 top-0 inset-0 bg-black opacity-50' />
-        <Navbar />
+        <Navbar extraClassess='absolute top-0 left-0' />
         <div className='contetnt z-10  max-w-sm mx-3 text-center'>
           <h3 className='text-primary text-2xl font-bold sm:text-5xl leading-10'>
             Lorem ipsum dolor sit{' '}
