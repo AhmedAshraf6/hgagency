@@ -29,7 +29,7 @@ const AllProjects = () => {
       {/* Card */}
       {/* Card */}
       <div
-        className='bg-cover bg-no-repeat   w-full h-64 relative group overflow-hidden rouned-lg'
+        className='bg-cover bg-no-repeat w-full h-64 relative group overflow-hidden rouned-lg'
         style={{
           backgroundImage: `url(${img1})`,
         }}

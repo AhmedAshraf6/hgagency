@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, PageBanner } from '../components';
+import { AllServices, Navbar, PageBanner } from '../components';
 
 const Services = () => {
   const breadcrumbs = [
@@ -10,6 +10,7 @@ const Services = () => {
     <>
       <Navbar />
       <PageBanner title='Services' breadcrumbs={breadcrumbs} />
+      <AllServices />
     </>
   );
 };

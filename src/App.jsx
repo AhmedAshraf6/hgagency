@@ -10,6 +10,7 @@ import {
   Projects,
   Services,
 } from './pages';
+import { SingleProject } from './components';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: 'projects',
         element: <Projects />,
+      },
+      {
+        path: 'projects/:projectid',
+        element: <SingleProject />,
       },
       {
         path: 'contact',

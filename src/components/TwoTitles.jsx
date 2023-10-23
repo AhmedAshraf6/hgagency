@@ -4,7 +4,7 @@ const TwoTitles = ({ title1, title2, postition = 'text-start' }) => {
   return (
     <div className={postition}>
       <h2 className='text-base-content'>{title1}</h2>
-      <p className='text-primary text-2xl sm:text-5xl font-semibold mt-3 sm:mt-5 max-w-lg  '>
+      <p className='text-primary text-2xl sm:text-5xl font-semibold mt-3 sm:mt-5  '>
         {title2}
       </p>
     </div>

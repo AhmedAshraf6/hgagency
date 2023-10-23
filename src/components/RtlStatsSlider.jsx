@@ -20,10 +20,11 @@ const allStats = [
   { title: 'home insraunce', icon: <AiFillStar /> },
   { title: 'home insraunce', icon: <AiFillStar /> },
 ];
-const StatsSlider = () => {
+const RtlStatsSlider = () => {
   return (
-    <section className='bg-base-content  text-neutral text-lg sm:text-2xl py-3 sm:py-5'>
+    <section className='bg-base-content  text-neutral text-lg sm:text-2xl py-3 sm:py-5 mt-5'>
       <Swiper
+        dir='rtl'
         slidesPerView={1}
         spaceBetween={10}
         autoplay={{
@@ -64,27 +65,4 @@ const StatsSlider = () => {
   );
 };
 
-export default StatsSlider;
-// {
-//   allStats.map((stat, index) => {
-//     return (
-//       <SwiperSlide
-//         className='flex gap-3 items-center whitespace-nowrap'
-//         key={index}
-//       >
-//         {({ isActive }) => (
-//           <motion.div
-//             initial={{ opacity: 0, scale: 0.5 }}
-//             animate={{
-//               opacity: isActive ? 1 : 0,
-//               scale: isActive ? 1 : 0.5,
-//             }}
-//           >
-//             {stat.icon}
-//             <span> {stat.title}</span>
-//           </motion.div>
-//         )}
-//       </SwiperSlide>
-//     );
-//   });
-// }
+export default RtlStatsSlider;

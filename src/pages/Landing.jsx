@@ -5,9 +5,11 @@ import vid from '../assets/wolf2.mp4';
 import {
   Carousel,
   Counter,
+  HomeSlider,
   MovingSection,
   Navbar,
   ProjeressSection,
+  RtlStatsSlider,
   ServicesSection,
   StatsSlider,
 } from '../components';
@@ -47,7 +49,12 @@ const Landing = () => {
       </div>
       <StatsSlider />
       <Counter />
+      <HomeSlider />
       <ServicesSection />
+      <div className='mt-10 sm:mt-24'>
+        <StatsSlider />
+        <RtlStatsSlider />
+      </div>
       <MovingSection />
       <ProjeressSection />
     </>
