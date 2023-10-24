@@ -5,6 +5,7 @@ import vid from '../assets/wolf2.mp4';
 import {
   Carousel,
   Counter,
+  FeaturedProjects,
   HomeSlider,
   MovingSection,
   Navbar,
@@ -18,7 +19,7 @@ import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 const Landing = () => {
   return (
     <>
-      <div className='relative h-screen grid place-items-center '>
+      <div className='relative h-[80vh] grid place-items-center '>
         <video
           autoPlay
           loop
@@ -48,6 +49,7 @@ const Landing = () => {
         <BsFillArrowDownCircleFill className='animate-bounce absolute bottom-5 text-2xl cursor-pointer' />
       </div>
       <StatsSlider />
+      <FeaturedProjects />
       <Counter />
       <HomeSlider />
       <ServicesSection />
@@ -55,6 +57,7 @@ const Landing = () => {
         <StatsSlider />
         <RtlStatsSlider />
       </div>
+
       <MovingSection />
       <ProjeressSection />
     </>

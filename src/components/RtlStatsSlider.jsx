@@ -27,9 +27,10 @@ const RtlStatsSlider = () => {
         dir='rtl'
         slidesPerView={1}
         spaceBetween={10}
+        loop={true}
         autoplay={{
           delay: 1,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         slidesPerGroup={5}
         breakpoints={{
@@ -55,7 +56,10 @@ const RtlStatsSlider = () => {
         className='mySwiper align-element'
       >
         {allStats.map((stat, index) => (
-          <SwiperSlide className='flex gap-3 items-center whitespace-nowrap'>
+          <SwiperSlide
+            className='flex gap-3 items-center whitespace-nowrap'
+            key={index}
+          >
             <AiFillStar />
             <span> {stat.title}</span>
           </SwiperSlide>

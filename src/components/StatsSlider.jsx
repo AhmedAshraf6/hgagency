@@ -29,7 +29,9 @@ const StatsSlider = () => {
         autoplay={{
           delay: 1,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
+        loop={true}
         slidesPerGroup={5}
         breakpoints={{
           320: {
@@ -54,7 +56,10 @@ const StatsSlider = () => {
         className='mySwiper align-element'
       >
         {allStats.map((stat, index) => (
-          <SwiperSlide className='flex gap-3 items-center whitespace-nowrap'>
+          <SwiperSlide
+            className='flex gap-3 items-center whitespace-nowrap'
+            key={index}
+          >
             <AiFillStar />
             <span> {stat.title}</span>
           </SwiperSlide>

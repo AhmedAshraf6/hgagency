@@ -15,10 +15,12 @@ const PageBanner = ({ title, breadcrumbs }) => {
         <p className='mt-3 sm:mt-5'>
           <div className='text-md  text-primary'>
             <ul className='flex gap-3'>
-              {breadcrumbs?.map((bread) => {
+              {breadcrumbs?.map((bread, index) => {
                 if (bread.link) {
                   return (
-                    <li>{<Link to={`${bread.link}`}>{bread.word}</Link>}</li>
+                    <li key={index}>
+                      {<Link to={`${bread.link}`}>{bread.word}</Link>}
+                    </li>
                   );
                 } else {
                   return (
@@ -26,6 +28,7 @@ const PageBanner = ({ title, breadcrumbs }) => {
                       className={`border-l-2 pl-2 ${
                         bread.active && 'text-base-content font-semibold'
                       }  `}
+                      key={index}
                     >
                       {bread.word}
                     </li>
