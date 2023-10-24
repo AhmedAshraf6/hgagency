@@ -53,7 +53,7 @@ const StatsSlider = () => {
         }}
         speed={50000}
         modules={[Autoplay]}
-        className='mySwiper align-element'
+        className='mySwiper'
       >
         {allStats.map((stat, index) => (
           <SwiperSlide

@@ -22,7 +22,7 @@ const allStats = [
 ];
 const RtlStatsSlider = () => {
   return (
-    <section className='bg-base-content  text-neutral text-lg sm:text-2xl py-3 sm:py-5 mt-5'>
+    <section className='  text-primary text-lg sm:text-2xl py-3 sm:py-5 mt-5'>
       <Swiper
         dir='rtl'
         slidesPerView={1}
@@ -53,7 +53,7 @@ const RtlStatsSlider = () => {
         }}
         speed={50000}
         modules={[Autoplay]}
-        className='mySwiper align-element'
+        className='mySwiper '
       >
         {allStats.map((stat, index) => (
           <SwiperSlide
