@@ -16,7 +16,11 @@ const AboutCeo = () => {
   return (
     <>
       <Navbar />
-      <PageBanner title='About Us' breadcrumbs={breadcrumbs} />
+      <PageBanner
+        title='About Us'
+        breadcrumbs={breadcrumbs}
+        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+      />
       <Ceo />
       {/* <ProjressSection2 /> */}
       <div className='align-element my-6 sm:my-12'>

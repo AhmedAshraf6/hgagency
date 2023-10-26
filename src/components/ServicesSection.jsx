@@ -22,7 +22,6 @@ const ServicesSection = () => {
           className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
           data-aos='fade-up'
           data-aos-duration='1000'
-          data-aos-anchor-placement='center-center'
           data-aos-delay='300'
         >
           <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>
@@ -48,7 +47,6 @@ const ServicesSection = () => {
           className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
           data-aos='fade-up'
           data-aos-duration='1000'
-          data-aos-anchor-placement='center-center'
           data-aos-delay='500'
         >
           <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>
@@ -74,7 +72,6 @@ const ServicesSection = () => {
           className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
           data-aos='fade-up'
           data-aos-duration='1000'
-          data-aos-anchor-placement='center-center'
           data-aos-delay='700'
         >
           <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>

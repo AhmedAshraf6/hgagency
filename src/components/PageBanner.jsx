@@ -3,18 +3,34 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const PageBanner = ({ title, breadcrumbs }) => {
+const PageBanner = ({ title, breadcrumbs, vid, image = '' }) => {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <section
-      className=' h-[50vh] bg-cover bg-no-repeat relative bg-fixed'
-      style={{
-        backgroundImage:
-          'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
-      }}
+      className={`h-[50vh] bg-cover bg-no-repeat relative bg-fixed bg-[url("${image}")]`}
     >
+      {vid && (
+        <video
+          autoPlay
+          loop
+          muted
+          type={'video/mp4'}
+          className='video w-full h-full object-cover  absolute'
+          style={{ objectPosition: 'center 30%' }}
+          src={vid}
+        ></video>
+      )}
+      {/* <video
+        autoPlay
+        loop
+        muted
+        type={'video/mp4'}
+        className='video w-full h-full object-cover  absolute'
+        style={{ objectPosition: 'center 30%' }}
+        src={vid}
+      ></video> */}
       <div className='overlay absolute w-full h-full top-0 left-0 bg-black opacity-50'></div>
       <div className='align-element absolute top-1/2 -translate-y-[50%] text-primary'>
         <h3

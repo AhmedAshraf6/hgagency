@@ -16,7 +16,11 @@ const SingleProject = () => {
   return (
     <>
       <Navbar />
-      <PageBanner title='Single Project' breadcrumbs={breadcrumbs} />
+      <PageBanner
+        title='Single Project'
+        breadcrumbs={breadcrumbs}
+        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+      />
       <SingleProductSlider />
       <SingleProjectContent />
     </>

@@ -24,3 +24,5 @@ export { default as RtlStatsSlider } from './RtlStatsSlider';
 export { default as FeaturedProjects } from './FeaturedProjects';
 export { default as Clients } from './Clients';
 export { default as HorizontalScroll } from './HorizontalScroll';
+export { default as ScrollToTopButton } from './ScrollToTopButton ';
+export { default as TopHeaderEffect } from './TopHeaderEffect';

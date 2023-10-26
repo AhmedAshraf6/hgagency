@@ -21,7 +21,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='300'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img1} className='h-20 grayscale' />
         </div>
@@ -30,7 +29,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='500'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img2} className='h-20 grayscale' />
         </div>
@@ -39,7 +37,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='700'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img3} className='h-20 grayscale' />
         </div>
@@ -48,7 +45,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='900'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img1} className='h-20 grayscale' />
         </div>
@@ -57,7 +53,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='1100'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img2} className='h-20 grayscale' />
         </div>
@@ -66,7 +61,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='1300'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img3} className='h-20 grayscale' />
         </div>
@@ -75,7 +69,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='1500'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img1} className='h-20 grayscale' />
         </div>
@@ -84,7 +77,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='1700'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img2} className='h-20 grayscale' />
         </div>
@@ -93,7 +85,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='1900'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img3} className='h-20 grayscale' />
         </div>
@@ -102,7 +93,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='2100'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img1} className='h-20 grayscale' />
         </div>
@@ -111,7 +101,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='2300'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img2} className='h-20 grayscale' />
         </div>
@@ -120,7 +109,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='2500'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img3} className='h-20 grayscale' />
         </div>
@@ -129,7 +117,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='2700'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img1} className='h-20 grayscale' />
         </div>
@@ -138,7 +125,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='2900'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img2} className='h-20 grayscale' />
         </div>
@@ -147,7 +133,6 @@ const Clients = () => {
           data-aos='fade-up'
           data-aos-duration='1000'
           data-aos-delay='3000'
-          data-aos-anchor-placement='center-center'
         >
           <img src={img3} className='h-20 grayscale' />
         </div>

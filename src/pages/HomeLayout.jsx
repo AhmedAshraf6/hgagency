@@ -1,6 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Footer, Header, Navbar } from '../components';
+import {
+  Footer,
+  Header,
+  Navbar,
+  ScrollToTopButton,
+  TopHeaderEffect,
+} from '../components';
 const HomeLayout = () => {
   return (
     <>
@@ -9,6 +15,8 @@ const HomeLayout = () => {
         <Outlet />
         <Footer />
       </section>
+      <ScrollToTopButton />
+      <TopHeaderEffect />
     </>
   );
 };

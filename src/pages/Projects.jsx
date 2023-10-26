@@ -9,7 +9,11 @@ const Projects = () => {
   return (
     <>
       <Navbar />
-      <PageBanner title='Projects' breadcrumbs={breadcrumbs} />
+      <PageBanner
+        title='Projects'
+        breadcrumbs={breadcrumbs}
+        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+      />
       <AllProjects />
     </>
   );

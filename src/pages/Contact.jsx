@@ -10,7 +10,11 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <PageBanner title='Contact' breadcrumbs={breadcrumbs} />
+      <PageBanner
+        title='Contact'
+        breadcrumbs={breadcrumbs}
+        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+      />
       <ContactInfo />
       <GoogleMap />
     </>

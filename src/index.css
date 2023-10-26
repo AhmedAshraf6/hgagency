@@ -32,3 +32,32 @@ html {
   @apply btn bg-base-content text-neutral font-bold text-sm hover:bg-base-content/70;
 }
 /* asdsda */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #333;
+}
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #fdc001;
+  transform-origin: 0%;
+  z-index: 9999;
+}
