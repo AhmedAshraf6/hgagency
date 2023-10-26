@@ -22,3 +22,5 @@ export { default as Ceo } from './Ceo';
 export { default as HomeSlider } from './HomeSlider';
 export { default as RtlStatsSlider } from './RtlStatsSlider';
 export { default as FeaturedProjects } from './FeaturedProjects';
+export { default as Clients } from './Clients';
+export { default as HorizontalScroll } from './HorizontalScroll';

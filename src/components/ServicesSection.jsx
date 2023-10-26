@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { LiaAwardSolid } from 'react-icons/lia';
 import { BsFillArrowUpRightCircleFill } from 'react-icons/bs';
 import TwoTitles from './TwoTitles';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const ServicesSection = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className='align-element mt-10 sm:mt-24'>
       <TwoTitles
@@ -14,7 +18,13 @@ const ServicesSection = () => {
       {/* services */}
       <div className='mt-12 flex flex-col '>
         {/* Service 1 */}
-        <div className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'>
+        <div
+          className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-anchor-placement='center-center'
+          data-aos-delay='300'
+        >
           <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>
           <div className='flex  justify-start sm:justify-center items-center gap-3 relative '>
             <LiaAwardSolid className='text-6xl ' />
@@ -34,7 +44,13 @@ const ServicesSection = () => {
           </div>
         </div>
         {/* Service 1 */}
-        <div className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'>
+        <div
+          className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-anchor-placement='center-center'
+          data-aos-delay='500'
+        >
           <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>
           <div className='flex  justify-start sm:justify-center items-center gap-3 relative '>
             <LiaAwardSolid className='text-6xl ' />
@@ -54,7 +70,13 @@ const ServicesSection = () => {
           </div>
         </div>
         {/* Service 1 */}
-        <div className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'>
+        <div
+          className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-anchor-placement='center-center'
+          data-aos-delay='700'
+        >
           <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>
           <div className='flex  justify-start sm:justify-center items-center gap-3 relative '>
             <LiaAwardSolid className='text-6xl ' />

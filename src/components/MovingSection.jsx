@@ -48,18 +48,18 @@ const MovingSection = () => {
   return (
     <div className='mt-10 sm:mt-24'>
       <div className=''>
-        <main className='align-element'>
+        <main className='align-element transition duration-700'>
           <AnimatePresence mode='wait'>
             <motion.div
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 2 }}
               className='h-[80vh]'
             >
               <img
                 src={selectedTab.img}
-                className='h-full w-full object-contain'
+                className='h-full w-full object-contain '
               />
             </motion.div>
           </AnimatePresence>
@@ -72,6 +72,7 @@ const MovingSection = () => {
                 className={`text-xl sm:text-2xl py-5 px-3  relative cursor-default tap
                 ${item === selectedTab && 'selected bg-base-content'}
               `}
+                onMouseOver={() => setSelectedTab(item)}
               >
                 {selectedTab === item && (
                   <div className='absolute bottom-[70px] left-[0] w-full bg-base-100 py-5 px-3 hidden sm:block'>
@@ -85,9 +86,7 @@ const MovingSection = () => {
                     <p className='paragraph'>{selectedTab.p}</p>
                   </div>
                 )}
-                <span onMouseOver={() => setSelectedTab(item)}>
-                  {item.label}
-                </span>
+                <span>{item.label}</span>
               </li>
             </>
           ))}

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { TwoTitles } from './index';
 import { HiBuildingStorefront } from 'react-icons/hi2';
 import { HiOutlineArrowTrendingUp } from 'react-icons/hi2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,7 +14,7 @@ import 'swiper/css/effect-fade';
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
-import { Autoplay } from 'swiper/modules';
+
 const slides = [
   {
     img: img1,
@@ -104,7 +107,19 @@ const slides = [
     icon: <HiOutlineArrowTrendingUp />,
   },
 ];
+const smCard = [
+  {
+    num: '20',
+    title: 'Get Started',
+    paragraph:
+      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit Asperiores, blanditiis',
+    icon: <HiBuildingStorefront />,
+  },
+];
 const HomeSlider = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className='align-element mt-10 sm:mt-24'>
       <TwoTitles
@@ -113,7 +128,13 @@ const HomeSlider = () => {
         postition='text-center'
       />
       <div className='card grid md:grid-cols-3 lg:grid-cols-4 mt-20 gap-y-20'>
-        <div className='flex flex-col gap-3 items-center relative'>
+        <div
+          className='flex flex-col gap-3 items-center relative'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-anchor-placement='bottom-bottom'
+          data-aos-delay='300'
+        >
           <HiBuildingStorefront className='text-base-content text-4xl' />
           {/* <div className='absolute rounded-full bg-base-content text-primary flex justify-center items-center p-1'>
             02
@@ -131,7 +152,13 @@ const HomeSlider = () => {
             Asperiores, blanditiis?
           </p>
         </div>
-        <div className='flex flex-col gap-3 items-center relative'>
+        <div
+          className='flex flex-col gap-3 items-center relative'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-anchor-placement='bottom-bottom'
+          data-aos-delay='500'
+        >
           <HiBuildingStorefront className='text-base-content text-4xl' />
           {/* <div className='absolute rounded-full bg-base-content text-primary flex justify-center items-center p-1'>
             02
@@ -149,7 +176,13 @@ const HomeSlider = () => {
             Asperiores, blanditiis?
           </p>
         </div>
-        <div className='flex flex-col gap-3 items-center relative'>
+        <div
+          className='flex flex-col gap-3 items-center relative'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-anchor-placement='bottom-bottom'
+          data-aos-delay='700'
+        >
           <HiBuildingStorefront className='text-base-content text-4xl' />
           {/* <div className='absolute rounded-full bg-base-content text-primary flex justify-center items-center p-1'>
             02
@@ -167,7 +200,13 @@ const HomeSlider = () => {
             Asperiores, blanditiis?
           </p>
         </div>
-        <div className='flex flex-col gap-3 items-center relative'>
+        <div
+          className='flex flex-col gap-3 items-center relative'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-anchor-placement='bottom-bottom'
+          data-aos-delay='1000'
+        >
           <HiBuildingStorefront className='text-base-content text-4xl' />
           {/* <div className='absolute rounded-full bg-base-content text-primary flex justify-center items-center p-1'>
             02

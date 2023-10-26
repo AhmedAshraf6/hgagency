@@ -4,9 +4,11 @@ import banner2 from '../assets/banner3.png';
 import vid from '../assets/wolf2.mp4';
 import {
   Carousel,
+  Clients,
   Counter,
   FeaturedProjects,
   HomeSlider,
+  HorizontalScroll,
   MovingSection,
   Navbar,
   ProjeressSection,
@@ -48,8 +50,10 @@ const Landing = () => {
         </div>
         <BsFillArrowDownCircleFill className='animate-bounce absolute bottom-5 text-2xl cursor-pointer' />
       </div>
+
       <StatsSlider />
       <FeaturedProjects />
+      <ProjeressSection />
       <Counter />
       <HomeSlider />
       <ServicesSection />
@@ -57,9 +61,9 @@ const Landing = () => {
         <StatsSlider />
         <RtlStatsSlider />
       </div>
-
+      <Clients />
+      <HorizontalScroll />
       <MovingSection />
-      <ProjeressSection />
     </>
   );
 };

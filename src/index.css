@@ -6,17 +6,18 @@
     @apply mx-auto max-w-7xl px-4 sm:px-8;
   }
 }
-.swiper-button-prev {
+/* .swiper-button-prev {
   left: auto;
   right: 14px;
   margin-top: 32px;
-}
+} */
 
 /* body {
   height: 6000px;
 } */
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .grid-template-fit {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

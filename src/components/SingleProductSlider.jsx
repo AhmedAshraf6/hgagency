@@ -3,47 +3,84 @@ import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/banner3.png';
 import img4 from '../assets/banner4.png';
-const carouselImages = [img1, img2, img3, img4];
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { HiOutlineArrowTrendingUp } from 'react-icons/hi2';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+const carouselImages = [img1, img2, img3, img4];
+const slides = [
+  {
+    img: img1,
+    title: 'home insurance',
+    paragraph: 'Home Insuance',
+    icon: <HiOutlineArrowTrendingUp />,
+  },
+  {
+    img: img2,
+    title: 'home insurance',
+    paragraph: 'Home Insuance',
+    icon: <HiOutlineArrowTrendingUp />,
+  },
+  {
+    img: img3,
+    title: 'home insurance',
+    paragraph: 'Home Insuance',
+    icon: <HiOutlineArrowTrendingUp />,
+  },
+  {
+    img: img1,
+    title: 'home insurance',
+    paragraph: 'Home Insuance',
+    icon: <HiOutlineArrowTrendingUp />,
+  },
+  {
+    img: img2,
+    title: 'home insurance',
+    paragraph: 'Home Insuance',
+    icon: <HiOutlineArrowTrendingUp />,
+  },
+  {
+    img: img3,
+    title: 'home insurance',
+    paragraph: 'Home Insuance',
+    icon: <HiOutlineArrowTrendingUp />,
+  },
+  {
+    img: img1,
+    title: 'home insurance',
+    paragraph: 'Home Insuance',
+    icon: <HiOutlineArrowTrendingUp />,
+  },
+];
 const SingleProductSlider = () => {
   return (
     <div className='align-element mt-10 sm:mt-24'>
-      <div className='h-[28rem] carousel carousel-center   p-4 space-x-4  rounded-box'>
-        {carouselImages.map((image, index) => {
-          return (
-            <div
-              id={`slide${index + 1}`}
-              className='carousel-item relative w-full'
-              key={index}
-            >
-              <img src={image} className='w-full object-contain' />
-              <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-                {index === 0 ? (
-                  <a
-                    href={`#slide${carouselImages.length}`}
-                    className='btn btn-circle'
-                  >
-                    ❮
-                  </a>
-                ) : (
-                  <a href={`#slide${index}`} className='btn btn-circle'>
-                    ❮
-                  </a>
-                )}
-                {index === carouselImages.length - 1 ? (
-                  <a href={`#slide1`} className='btn btn-circle'>
-                    ❯
-                  </a>
-                ) : (
-                  <a href={`#slide${index + 2}`} className='btn btn-circle'>
-                    ❯
-                  </a>
-                )}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <Swiper
+        slidesPerView={1}
+        navigation={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        speed={1000}
+        modules={[Autoplay, Navigation]}
+        className='mySwiper align-element'
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide className='flex gap-3 items-center whitespace-nowrap w-full'>
+            <img
+              src={slide.img}
+              alt=''
+              className='w-full  object-contain h-[500px]'
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const PageBanner = ({ title, breadcrumbs }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section
       className=' h-[50vh] bg-cover bg-no-repeat relative bg-fixed'
@@ -11,10 +17,21 @@ const PageBanner = ({ title, breadcrumbs }) => {
     >
       <div className='overlay absolute w-full h-full top-0 left-0 bg-black opacity-50'></div>
       <div className='align-element absolute top-1/2 -translate-y-[50%] text-primary'>
-        <h3 className='text-5xl font-bold capitalize z-20'>{title}</h3>
+        <h3
+          className='text-5xl font-bold capitalize z-20'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+        >
+          {title}
+        </h3>
         <p className='mt-3 sm:mt-5'>
           <div className='text-md  text-primary'>
-            <ul className='flex gap-3'>
+            <ul
+              className='flex gap-3'
+              data-aos='fade-up'
+              data-aos-duration='1000'
+              data-aos-delay='300'
+            >
               {breadcrumbs?.map((bread, index) => {
                 if (bread.link) {
                   return (
