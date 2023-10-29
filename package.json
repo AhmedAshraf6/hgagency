@@ -12,12 +12,14 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "aos": "^2.3.4",
+    "contentful": "^10.6.5",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-player": "^2.13.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.16.0",
     "react-scroll-trigger": "^0.6.14",
     "swiper": "^10.3.1"

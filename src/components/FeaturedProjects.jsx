@@ -69,7 +69,6 @@ const FeaturedProjects = () => {
             data-aos='fade-up'
             data-aos-duration='1000'
             data-aos-delay={proj.delay}
-            data-aos-anchor-placement='bottom-bottom'
             key={index}
           >
             <div className='group-hover:bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>

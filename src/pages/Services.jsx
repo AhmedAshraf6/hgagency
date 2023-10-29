@@ -1,5 +1,10 @@
 import React from 'react';
-import { AllServices, Navbar, PageBanner } from '../components';
+import {
+  AllServices,
+  FaqServiceSection,
+  Navbar,
+  PageBanner,
+} from '../components';
 import vid from '../assets/hg.mp4';
 
 const Services = () => {
@@ -12,6 +17,7 @@ const Services = () => {
       <Navbar />
       <PageBanner title='Services' breadcrumbs={breadcrumbs} vid={vid} />
       <AllServices />
+      <FaqServiceSection />
     </>
   );
 };

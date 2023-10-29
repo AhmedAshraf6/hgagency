@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       animation: {
-        'animate-bounce': 'bounce 10s infinite',
+        'animate-bounce': 'bounce 3s infinite',
+        'animate-spin': 'spin 3s infinite',
       },
     },
   },

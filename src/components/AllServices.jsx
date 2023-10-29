@@ -16,6 +16,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='500'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>
@@ -37,6 +40,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='700'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>
@@ -58,6 +64,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='900'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>
@@ -79,6 +88,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='1100'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>
@@ -100,6 +112,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='300'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>
@@ -121,6 +136,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='500'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>
@@ -142,6 +160,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='700'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>
@@ -163,6 +184,9 @@ const AllServices = () => {
           style={{
             backgroundImage: `url(${img3})`,
           }}
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          data-aos-delay='900'
         >
           <div className='bg-black/50 overlay absolute bottom-0 w-full h-full left-0 transition-all duration-700'></div>
           <div className='absolute bottom-10 left-[50%] -translate-x-[50%]  flex flex-col gap-2 items-center transition-all   duration-700 cursor-pointer'>

@@ -26,3 +26,5 @@ export { default as Clients } from './Clients';
 export { default as HorizontalScroll } from './HorizontalScroll';
 export { default as ScrollToTopButton } from './ScrollToTopButton ';
 export { default as TopHeaderEffect } from './TopHeaderEffect';
+export { default as FaqServiceSection } from './FaqServiceSection';
+export { default as Loading } from './Loading';
