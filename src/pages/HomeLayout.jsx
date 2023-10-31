@@ -8,10 +8,16 @@ import {
   ScrollToTopButton,
   TopHeaderEffect,
 } from '../components';
-import { useFetchHeroSection } from '../components/Api/fetchHomePage';
+import {
+  useFetchFeaturedProjects,
+  useFetchHeroSection,
+  useFetchStatsSlider,
+} from '../components/Api/fetchHomePage';
 const HomeLayout = () => {
   const { isLoading } = useFetchHeroSection();
-  if (isLoading) {
+  const { isLoadingStatsSlider } = useFetchStatsSlider();
+  const { isLoadingFeaturedProjects } = useFetchFeaturedProjects();
+  if (isLoading || isLoadingStatsSlider || isLoadingFeaturedProjects) {
     return <Loading />;
   }
   return (

@@ -21,7 +21,6 @@ import { useFetchHeroSection } from '../components/Api/fetchHomePage';
 
 const Landing = () => {
   const { data } = useFetchHeroSection();
-
   return (
     <>
       <div className='relative h-[89vh] grid place-items-center '>
