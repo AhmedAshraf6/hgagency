@@ -3,32 +3,16 @@ import { BiUser } from 'react-icons/bi';
 import { IoLocationSharp } from 'react-icons/io5';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 
-const SingleProjectContent = () => {
+const SingleProjectContent = ({ singleProject }) => {
   return (
     <div className='align-element grid md:grid-cols-3 mt-10 sm:mt-24'>
       <div className='md:col-span-2'>
         <h2 className='text-base-content text-xl sm:text-4xl font-bold'>
-          Const Containment
+          {singleProject.projectName}
         </h2>
-        <p className='paragraph mt-5'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-          aperiam repudiandae iure beatae fugit earum non nemo voluptas deserunt
-          labore repellendus? Eveniet molestias nesciunt praesentium aperiam
-          inventore in, nisi sit nostrum consequuntur suscipit assumenda
-          sapiente natus a sequi impedit unde nobis laboriosam? Fugit alias
-          dolor numquam rem sapiente ab fuga.
-        </p>
-        <p className='paragraph mt-5'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aliquid
-          voluptates maxime similique ab porro rerum quia, modi quibusdam
-          officiis dolorem quo a odit praesentium, hic qui accusamus corrupti!
-          Voluptatem architecto id adipisci nihil magni, possimus corrupti nam
-          esse aperiam sunt iusto accusamus rerum harum pariatur quidem sint
-          aspernatur omnis doloremque molestias perferendis exercitationem ullam
-          corporis. Consequatur quod esse hic facere harum deleniti fugiat quas
-          ex. Enim error voluptates modi!
-        </p>
-        <div className='accordian mt-5'>
+        <p className='paragraph mt-5'>{singleProject.paragraph1}</p>
+        <p className='paragraph mt-5'>{singleProject.paragraph2}</p>
+        {/* <div className='accordian mt-5'>
           <details className='collapse collapse-plus'>
             <summary className='m-0 p-0 collapse-title text-lg font-semibold text-primary'>
               who is insurance?
@@ -56,14 +40,13 @@ const SingleProjectContent = () => {
               </p>
             </div>
           </details>
-        </div>
+        </div> */}
       </div>
       <div className='col-span-1'>
         <div className='card bg-gray-200 p-5 text-black'>
           <h4 className='font-semibold'>Project Overview</h4>
           <p className='paragraph mt-3'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            aliquid.
+            {singleProject.paragraph1.slice(0, 70)}
           </p>
           <div className='flex items-center gap-2 mt-3'>
             <div className='avatar placeholder'>
@@ -73,7 +56,7 @@ const SingleProjectContent = () => {
             </div>
             <div>
               <h6 className='font-semibold'>Client Name</h6>
-              <span className='paragraph'>Alex jones</span>
+              <span className='paragraph'>{singleProject.clientName}</span>
             </div>
           </div>
           <div className='flex items-center gap-2 mt-3'>
@@ -84,7 +67,7 @@ const SingleProjectContent = () => {
             </div>
             <div>
               <h6 className='font-semibold'>Locations</h6>
-              <span className='paragraph'>Al minya, Egypt</span>
+              <span className='paragraph'>{singleProject.location}</span>
             </div>
           </div>
           <div className='flex items-center gap-2 mt-3'>
@@ -95,7 +78,9 @@ const SingleProjectContent = () => {
             </div>
             <div>
               <h6 className='font-semibold'>Date</h6>
-              <span className='paragraph'>09 May, 2023</span>
+              <span className='paragraph'>
+                {singleProject.date.split('T')[0]}
+              </span>
             </div>
           </div>
         </div>

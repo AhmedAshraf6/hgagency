@@ -33,7 +33,7 @@ const PageBanner = ({ title, breadcrumbs, vid = '', image = '' }) => {
         >
           {title}
         </h3>
-        <p className='mt-3 sm:mt-5'>
+        <div className='mt-3 sm:mt-5'>
           <div className='text-md  text-primary'>
             <ul
               className='flex gap-3'
@@ -63,7 +63,7 @@ const PageBanner = ({ title, breadcrumbs, vid = '', image = '' }) => {
               })}
             </ul>
           </div>
-        </p>
+        </div>
       </div>
     </section>
   );

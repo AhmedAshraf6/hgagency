@@ -36,11 +36,13 @@ export const useFetchStatsSlider = () => {
 };
 export const useFetchFeaturedProjects = () => {
   const { data, isLoading: isLoadingFeaturedProjects } = useQuery({
-    queryKey: ['homeFeaturedProjects'],
+    queryKey: ['homeProjects'],
     queryFn: async () => {
       const res = await client.getEntries({
-        content_type: 'homeFeaturedProjects',
+        content_type: 'projects',
+        'fields.featured': true,
       });
+
       const data = res.items.map((stat) => {
         const { title1, title2, images, video } = stat.fields;
         const id = stat.sys.id;
@@ -56,4 +58,47 @@ export const useFetchFeaturedProjects = () => {
     },
   });
   return { data, isLoadingFeaturedProjects };
+};
+export const useFetchProjects = () => {
+  const { data: projects, isLoading: isLoadingProjects } = useQuery({
+    queryKey: ['homeProjects'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'projects',
+      });
+      const data = res.items.map((stat) => {
+        const {
+          projectName,
+          video,
+          images,
+          paragraph1,
+          paragraph2,
+          clientName,
+          location,
+          date,
+        } = stat.fields;
+        const id = stat.sys.id;
+        const vid = video?.fields?.file?.url;
+        const imgs = images?.map((image) => {
+          const imgId = image.sys.id;
+          const img = image?.fields?.file?.url;
+          return { img, id: imgId };
+        });
+        return {
+          projectName,
+          paragraph1,
+          paragraph2,
+          clientName,
+          location,
+          date,
+          id,
+          vid,
+          imgs,
+        };
+      });
+      console.log(data);
+      return data;
+    },
+  });
+  return { projects, isLoadingProjects };
 };

@@ -12,52 +12,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-const carouselImages = [img1, img2, img3, img4];
-const slides = [
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img2,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img3,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img2,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img3,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-];
-const SingleProductSlider = () => {
+const SingleProductSlider = ({ images }) => {
+  console.log(images);
   return (
     <div className='align-element mt-10 sm:mt-24'>
       <Swiper
@@ -71,8 +27,11 @@ const SingleProductSlider = () => {
         modules={[Autoplay, Navigation]}
         className='mySwiper align-element'
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide className='flex gap-3 items-center whitespace-nowrap w-full'>
+        {images.map((slide) => (
+          <SwiperSlide
+            className='flex gap-3 items-center whitespace-nowrap w-full'
+            key={slide.id}
+          >
             <img
               src={slide.img}
               alt=''
