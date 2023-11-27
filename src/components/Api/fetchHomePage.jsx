@@ -102,3 +102,32 @@ export const useFetchProjects = () => {
   });
   return { projects, isLoadingProjects };
 };
+export const useFetchVideoSection = () => {
+  const { data, isLoading: isLoadingVideoSection } = useQuery({
+    queryKey: ['homeVideoSection'],
+    queryFn: async () => {
+      const res = await client.getEntries({ content_type: 'homeVideoSection' });
+      const { title1, title2, button, video, image } = res.items[0].fields;
+      const vid = video?.fields?.file?.url;
+      const img = image?.fields?.file?.url;
+      return { title1, title2, button, vid, img };
+    },
+  });
+  return { data, isLoadingVideoSection };
+};
+export const useFetchProgressSection = () => {
+  const { data, isLoading: isLoadingProgressSection } = useQuery({
+    queryKey: ['homeProgressSection'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'homeProgressSection',
+      });
+      const { image1, image2, paragraph, button, progress, title1, title2 } =
+        res.items[0].fields;
+      const img1 = image1?.fields?.file?.url;
+      const img2 = image2?.fields?.file?.url;
+      return { img1, img2, paragraph, button, progress, title1, title2 };
+    },
+  });
+  return { data, isLoadingProgressSection };
+};
