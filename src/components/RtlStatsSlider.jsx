@@ -8,19 +8,12 @@ import 'swiper/css/effect-fade';
 import { Autoplay } from 'swiper/modules';
 import { AiFillStar } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { useFetchStatsSliderReverse } from './Api/fetchHomePage';
 // import required modules
-const allStats = [
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-  { title: 'home insraunce', icon: <AiFillStar /> },
-];
+
 const RtlStatsSlider = () => {
+  const { data, isLoadingStatsSliderReverse } = useFetchStatsSliderReverse();
+
   return (
     <section className='  text-primary text-lg sm:text-2xl py-3 sm:py-5 mt-5'>
       <Swiper
@@ -55,10 +48,10 @@ const RtlStatsSlider = () => {
         modules={[Autoplay]}
         className='mySwiper '
       >
-        {allStats.map((stat, index) => (
+        {data?.map((stat) => (
           <SwiperSlide
             className='flex gap-3 items-center whitespace-nowrap'
-            key={index}
+            key={stat.id}
           >
             <AiFillStar />
             <span> {stat.title}</span>

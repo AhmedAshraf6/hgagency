@@ -4,7 +4,10 @@ import { BsFillArrowUpRightCircleFill } from 'react-icons/bs';
 import TwoTitles from './TwoTitles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useFetchHomeServiceSection } from './Api/fetchHomePage';
 const ServicesSection = () => {
+  const { data, isLoadingHomeServiceSection } = useFetchHomeServiceSection();
+  console.log(data);
   useEffect(() => {
     AOS.init();
   }, []);
@@ -17,32 +20,33 @@ const ServicesSection = () => {
       />
       {/* services */}
       <div className='mt-12 flex flex-col '>
+        {data?.map((service) => {
+          return (
+            <div
+              className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
+              data-aos='fade-up'
+              data-aos-duration='1000'
+              data-aos-delay='300'
+            >
+              <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>
+              <div className='flex  justify-start sm:justify-center items-center gap-3 relative '>
+                <LiaAwardSolid className='text-6xl ' />
+                <h3 className='max-w-[200px] text-2xl font-semibold text-primary group-hover:text-black transation duration-1000 ease-in-out'>
+                  {service?.title}
+                </h3>
+                <div className='absolute h-20 w-[1px] bg-base-300 right-16 hidden lg:block'></div>
+              </div>
+              <div className='paragraph  group-hover:z-10 transation duration-1000'>
+                {service?.paragraph}
+              </div>
+              <div className='flex justify-start sm:justify-center items-center group-hover:z-10 '>
+                <BsFillArrowUpRightCircleFill className='text-4xl sm:text-5xl ' />
+              </div>
+            </div>
+          );
+        })}
         {/* Service 1 */}
-        <div
-          className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
-          data-aos='fade-up'
-          data-aos-duration='1000'
-          data-aos-delay='300'
-        >
-          <div className='absolute top-0 -left-[100%] group-hover:left-0 bg-white w-full h-full transation duration-1000'></div>
-          <div className='flex  justify-start sm:justify-center items-center gap-3 relative '>
-            <LiaAwardSolid className='text-6xl ' />
-            <h3 className='max-w-[200px] text-2xl font-semibold text-primary group-hover:text-black transation duration-1000 ease-in-out'>
-              Mediacal Insurance
-            </h3>
-            <div className='absolute h-20 w-[1px] bg-base-300 right-16 hidden lg:block'></div>
-          </div>
-          <div className='paragraph  group-hover:z-10 transation duration-1000'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            alias sapiente incidunt iure repellat? Ab earum, nam distinctio
-            pariatur repudiandae ea labore quisquam sint velit qui adipisci
-            veniam. Inventore, dolorum? Maiores
-          </div>
-          <div className='flex justify-start sm:justify-center items-center group-hover:z-10 '>
-            <BsFillArrowUpRightCircleFill className='text-4xl sm:text-5xl ' />
-          </div>
-        </div>
-        {/* Service 1 */}
+        {/* 
         <div
           className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
           data-aos='fade-up'
@@ -67,7 +71,7 @@ const ServicesSection = () => {
             <BsFillArrowUpRightCircleFill className='text-4xl sm:text-5xl ' />
           </div>
         </div>
-        {/* Service 1 */}
+
         <div
           className='grid grid-template-fit border-t-2 border-base-300 py-5 gap-5 cursor-default relative group overflow-hidden transation duration-1000'
           data-aos='fade-up'
@@ -91,7 +95,7 @@ const ServicesSection = () => {
           <div className='flex justify-start sm:justify-center items-center group-hover:z-10 '>
             <BsFillArrowUpRightCircleFill className='text-4xl sm:text-5xl ' />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

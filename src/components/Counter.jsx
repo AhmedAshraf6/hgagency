@@ -5,8 +5,10 @@ import { RiTeamLine } from 'react-icons/ri';
 import { LiaAwardSolid } from 'react-icons/lia';
 import { HiLightBulb } from 'react-icons/hi';
 import { PiHandshakeLight } from 'react-icons/pi';
+import { useFetchCounterSection } from './Api/fetchHomePage';
 const Counter = () => {
   const [counterOn, setCounterOn] = useState(false);
+  const { data, isLoadingCounterSection } = useFetchCounterSection();
 
   return (
     <ScrollTrigger
@@ -20,9 +22,18 @@ const Counter = () => {
         </div>
         <div>
           <h3 className='text-2xl sm:text-5xl font-semibold'>
-            {counterOn && <CountUp end='200' duration={3} delay={0} />}+
+            {counterOn && (
+              <CountUp
+                end={data?.counter?.expertTeam?.number}
+                duration={3}
+                delay={0}
+              />
+            )}
+            +
           </h3>
-          <span className='text-gray-400 '>Expert Team</span>
+          <span className='text-gray-400 '>
+            {data?.counter?.expertTeam?.name}
+          </span>
         </div>
       </div>
       <div className='flex items-center gap-3'>
@@ -31,9 +42,18 @@ const Counter = () => {
         </div>
         <div>
           <h3 className='text-2xl sm:text-5xl font-semibold'>
-            {counterOn && <CountUp end='27' duration={3} delay={0} />}+
+            {counterOn && (
+              <CountUp
+                end={data?.counter?.nationalAward?.number}
+                duration={3}
+                delay={0}
+              />
+            )}
+            +
           </h3>
-          <span className='text-gray-400 '>National Award</span>
+          <span className='text-gray-400 '>
+            {data?.counter?.nationalAward?.name}
+          </span>
         </div>
       </div>
       <div className='flex items-center gap-3'>
@@ -42,9 +62,18 @@ const Counter = () => {
         </div>
         <div>
           <h3 className='text-2xl sm:text-5xl font-semibold'>
-            {counterOn && <CountUp end='192' duration={3} delay={0} />}+
+            {counterOn && (
+              <CountUp
+                end={data?.counter?.projectCompleted?.number}
+                duration={3}
+                delay={0}
+              />
+            )}
+            +
           </h3>
-          <span className='text-gray-400 '>Project Completed</span>
+          <span className='text-gray-400 '>
+            {data?.counter?.projectCompleted?.name}
+          </span>
         </div>
       </div>
       <div className='flex items-center gap-3'>
@@ -53,9 +82,18 @@ const Counter = () => {
         </div>
         <div>
           <h3 className='text-2xl sm:text-5xl font-semibold'>
-            {counterOn && <CountUp end='186' duration={3} delay={0} />}+
+            {counterOn && (
+              <CountUp
+                end={data?.counter?.happyClients?.number}
+                duration={3}
+                delay={0}
+              />
+            )}
+            +
           </h3>
-          <span className='text-gray-400 '>Happy Clients</span>
+          <span className='text-gray-400 '>
+            {data?.counter?.happyClients?.name}
+          </span>
         </div>
       </div>
     </ScrollTrigger>

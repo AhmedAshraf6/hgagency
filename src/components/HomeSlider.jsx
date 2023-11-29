@@ -11,112 +11,11 @@ import { Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import img1 from '../assets/img1.jpg';
-import img2 from '../assets/img2.jpg';
-import img3 from '../assets/img3.jpg';
+import { useFetchHomeHomeSLider } from './Api/fetchHomePage';
 
-const slides = [
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img2,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img3,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img2,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img3,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img2,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img3,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img2,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img3,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img1,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img2,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-  {
-    img: img3,
-    title: 'home insurance',
-    paragraph: 'Home Insuance',
-    icon: <HiOutlineArrowTrendingUp />,
-  },
-];
-const smCard = [
-  {
-    num: '20',
-    title: 'Get Started',
-    paragraph:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit Asperiores, blanditiis',
-    icon: <HiBuildingStorefront />,
-  },
-];
 const HomeSlider = () => {
+  const { data, isLoadingHomeHomeSlider } = useFetchHomeHomeSLider();
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -250,8 +149,11 @@ const HomeSlider = () => {
           modules={[Autoplay]}
           className='mySwiper align-element'
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide className='flex gap-3 items-center whitespace-nowrap w-full'>
+          {data?.map((slide, index) => (
+            <SwiperSlide
+              className='flex gap-3 items-center whitespace-nowrap w-full'
+              key={slide.id}
+            >
               <div
                 className='bg-cover bg-no-repeat w-full h-96 relative group overflow-hidden rouned-lg'
                 style={{
@@ -262,7 +164,9 @@ const HomeSlider = () => {
                 <div className='absolute bottom-0 -left-[90%] group-hover:left-0 flex  transition-all   duration-700 cursor-pointer'>
                   <div className='avatar placeholder bg-base-content p-3'>
                     <div className='bg-white  rounded-full w-12  cursor-pointer  transition-all duration-200 '>
-                      <div className='text-2xl'>{slide.icon}</div>
+                      <div className='text-2xl'>
+                        <HiOutlineArrowTrendingUp />
+                      </div>
                     </div>
                   </div>
                   <div className='px-4 flex flex-col items-start justify-center bg-white'>
@@ -270,7 +174,7 @@ const HomeSlider = () => {
                       {slide.title}
                     </span>
                     <span className='text-base font-bold text-black'>
-                      {slide.paragraph}
+                      {slide.title}
                     </span>
                   </div>
                 </div>

@@ -131,3 +131,69 @@ export const useFetchProgressSection = () => {
   });
   return { data, isLoadingProgressSection };
 };
+export const useFetchCounterSection = () => {
+  const { data, isLoading: isLoadingCounterSection } = useQuery({
+    queryKey: ['homeCounterSection'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'homeCounterSection',
+      });
+      const { counter } = res.items[0].fields;
+
+      return { counter };
+    },
+  });
+  return { data, isLoadingCounterSection };
+};
+export const useFetchHomeHomeSLider = () => {
+  const { data, isLoading: isLoadingHomeHomeSlider } = useQuery({
+    queryKey: ['homeHomeSlider'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'homeHomeSlider',
+      });
+      const slides = res.items.map((slide) => {
+        const { title, image } = slide.fields;
+        const img = image?.fields?.file?.url;
+        const id = slide.sys.id;
+        return { title, img, id };
+      });
+      return slides;
+    },
+  });
+  return { data, isLoadingHomeHomeSlider };
+};
+export const useFetchHomeServiceSection = () => {
+  const { data, isLoading: isLoadingHomeServiceSection } = useQuery({
+    queryKey: ['homeServiceSection'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'homeServiceSection',
+      });
+      const services = res.items.map((service) => {
+        const { title, paragraph } = service.fields;
+        const id = service.sys.id;
+        return { id, title, paragraph };
+      });
+      return services;
+    },
+  });
+  return { data, isLoadingHomeServiceSection };
+};
+export const useFetchStatsSliderReverse = () => {
+  const { data, isLoading: isLoadingStatsSliderReverse } = useQuery({
+    queryKey: ['homeStatsSliderReverse'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'homeStatsSliderReverse',
+      });
+      const stats = res.items.map((stat) => {
+        const { title } = stat.fields;
+        const id = stat.sys.id;
+        return { title, id };
+      });
+      return stats;
+    },
+  });
+  return { data, isLoadingStatsSliderReverse };
+};
