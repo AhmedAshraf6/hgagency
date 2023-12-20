@@ -46,8 +46,8 @@ const ProjeressSection = () => {
           onEnter={() => setCounterOn(true)}
           onExit={() => setCounterOn(false)}
         >
-          {data?.progress?.map((prog) => (
-            <div className='mt-5'>
+          {data?.progress?.map((prog, index) => (
+            <div className='mt-5' key={index}>
               <div className='flex justify-between'>
                 <h6 className='font-bold'>{prog?.name}</h6>
                 <span className='text-gray-400'>{prog?.number}%</span>

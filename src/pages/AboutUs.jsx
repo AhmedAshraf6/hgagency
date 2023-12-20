@@ -7,19 +7,21 @@ import {
   WhyChooseUs,
 } from '../components';
 import NeedHelp from '../components/NeedHelp';
+import { useFetchAboutHero } from '../components/Api/fetchAboutPage';
 
 const AboutUs = () => {
   const breadcrumbs = [
     { link: '/', word: 'Home' },
     { word: 'About Us', active: true },
   ];
+  const { data } = useFetchAboutHero();
   return (
     <>
       <Navbar />
       <PageBanner
-        title='About Us'
+        title={data?.title}
         breadcrumbs={breadcrumbs}
-        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+        image={data?.img}
       />
       <ProjressSection2 />
       <div className='align-element my-6 sm:my-12'>

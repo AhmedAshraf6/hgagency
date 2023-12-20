@@ -7,6 +7,7 @@ const PageBanner = ({ title, breadcrumbs, vid = '', image = '' }) => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <section
       className={`h-[50vh] bg-cover bg-no-repeat relative bg-fixed `}

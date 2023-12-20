@@ -4,11 +4,14 @@ import img2 from '../assets/clients/img2.png';
 import img3 from '../assets/clients/img3.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useFetchOurSponsors } from './Api/fetchHomePage';
 
 const Clients = () => {
+  // const { data, isLoadingOurSponsors } = useFetchOurSponsors();
   useEffect(() => {
     AOS.init();
   }, []);
+  // console.log(data);
   return (
     // sm:grid-cols-5 md:grid-cols-6
     <div className='align-element mt-10 sm:mt-24 '>

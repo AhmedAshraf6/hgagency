@@ -197,3 +197,35 @@ export const useFetchStatsSliderReverse = () => {
   });
   return { data, isLoadingStatsSliderReverse };
 };
+export const useFetchOurSponsors = () => {
+  const { data, isLoading: isLoadingOurSponsors } = useQuery({
+    queryKey: ['homeOurSponsors'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'homeOurSponsors',
+      });
+      const sponsors = res.items.map((spon) => {
+        const { image } = spon.fields;
+        const img = image?.fields?.file?.url;
+        const id = spon.sys.id;
+        return { img, id };
+      });
+      return sponsors;
+    },
+  });
+  return { data, isLoadingOurSponsors };
+};
+export const useFetchHorizontalSection = () => {
+  const { data } = useQuery({
+    queryKey: ['horizontalSection'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'horizontalSection',
+      });
+      const { image, hazemInfo, mainTitle, span, title } = res.items[0].fields;
+      const img = image?.fields?.file?.url;
+      return { img, hazemInfo, mainTitle, span, title };
+    },
+  });
+  return { data };
+};
