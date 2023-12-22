@@ -1,18 +1,20 @@
 import React from 'react';
 import { AllProjects, Navbar, PageBanner } from '../components';
+import { useFetchProjectsHero } from '../components/Api/fetchProjects';
 
 const Projects = () => {
   const breadcrumbs = [
     { link: '/', word: 'Home' },
     { word: 'Projects', active: true },
   ];
+  const { data } = useFetchProjectsHero();
   return (
     <>
       <Navbar />
       <PageBanner
-        title='Projects'
+        title={data?.title}
         breadcrumbs={breadcrumbs}
-        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+        image={data?.img}
       />
       <AllProjects />
     </>

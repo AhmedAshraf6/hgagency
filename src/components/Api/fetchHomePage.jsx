@@ -199,17 +199,19 @@ export const useFetchStatsSliderReverse = () => {
 };
 export const useFetchOurSponsors = () => {
   const { data, isLoading: isLoadingOurSponsors } = useQuery({
-    queryKey: ['homeOurSponsors'],
+    queryKey: ['homeOurCLients'],
     queryFn: async () => {
       const res = await client.getEntries({
-        content_type: 'homeOurSponsors',
+        content_type: 'homeOurCLients',
       });
+
       const sponsors = res.items.map((spon) => {
         const { image } = spon.fields;
         const img = image?.fields?.file?.url;
         const id = spon.sys.id;
         return { img, id };
       });
+      console.log(sponsors);
       return sponsors;
     },
   });
@@ -225,6 +227,40 @@ export const useFetchHorizontalSection = () => {
       const { image, hazemInfo, mainTitle, span, title } = res.items[0].fields;
       const img = image?.fields?.file?.url;
       return { img, hazemInfo, mainTitle, span, title };
+    },
+  });
+  return { data };
+};
+export const useFetchFooter = () => {
+  const { data } = useQuery({
+    queryKey: ['footer'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'footer',
+      });
+      const {
+        paragraph,
+        services,
+        facebookLink,
+        twitterLink,
+        instagramLink,
+        linkedinLink,
+        address,
+        mail,
+        phone,
+      } = res.items[0].fields;
+
+      return {
+        paragraph,
+        services,
+        facebookLink,
+        twitterLink,
+        instagramLink,
+        linkedinLink,
+        address,
+        mail,
+        phone,
+      };
     },
   });
   return { data };

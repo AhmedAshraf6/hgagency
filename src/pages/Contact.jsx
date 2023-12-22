@@ -1,19 +1,21 @@
 import React from 'react';
 import { AllProjects, ContactInfo, Navbar, PageBanner } from '../components';
 import GoogleMap from '../components/GoogleMap';
+import { useFetchContactHero } from '../components/Api/fetchContact';
 
 const Contact = () => {
   const breadcrumbs = [
     { link: '/', word: 'Home' },
     { word: 'Contact Us', active: true },
   ];
+  const { data } = useFetchContactHero();
   return (
     <>
       <Navbar />
       <PageBanner
-        title='Contact'
+        title={data?.title}
         breadcrumbs={breadcrumbs}
-        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+        image={data?.img}
       />
       <ContactInfo />
       <GoogleMap />
