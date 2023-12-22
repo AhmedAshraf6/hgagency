@@ -7,19 +7,21 @@ import {
   ProjressSection2,
 } from '../components';
 import NeedHelp from '../components/NeedHelp';
+import { useFetchAboutCeoHero } from '../components/Api/fetchAboutCeo';
 
 const AboutCeo = () => {
   const breadcrumbs = [
     { link: '/', word: 'Home' },
     { word: 'About Ceo', active: true },
   ];
+  const { data } = useFetchAboutCeoHero();
   return (
     <>
       <Navbar />
       <PageBanner
-        title='About Us'
+        title={data?.title}
         breadcrumbs={breadcrumbs}
-        image='https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg'
+        image={data?.img}
       />
       <Ceo />
       {/* <ProjressSection2 /> */}

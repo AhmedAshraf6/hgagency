@@ -6,16 +6,23 @@ import {
   PageBanner,
 } from '../components';
 import vid from '../assets/hg.mp4';
+import { useFetchServicesHero } from '../components/Api/fetchServices';
 
 const Services = () => {
   const breadcrumbs = [
     { link: '/', word: 'Home' },
     { word: 'Services', active: true },
   ];
+  const { data } = useFetchServicesHero();
+
   return (
     <>
       <Navbar />
-      <PageBanner title='Services' breadcrumbs={breadcrumbs} vid={vid} />
+      <PageBanner
+        title={data?.title}
+        breadcrumbs={breadcrumbs}
+        vid={data?.vid}
+      />
       <AllServices />
       <FaqServiceSection />
     </>

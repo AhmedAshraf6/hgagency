@@ -37,3 +37,48 @@ export const useFetchAboutProgressSection = () => {
   });
   return { data, isLoadingProgressSection };
 };
+export const useFetchAboutNeedHelp = () => {
+  const { data } = useQuery({
+    queryKey: ['aboutNeedHelp'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'aboutNeedHelp',
+      });
+      const {
+        span,
+        title,
+        phoneTitle,
+        phoneNumber,
+        image,
+        mailTitle,
+        mailNumber,
+      } = res.items[0].fields;
+      const img = image?.fields?.file?.url;
+      return {
+        span,
+        title,
+        phoneTitle,
+        phoneNumber,
+        img,
+        mailTitle,
+        mailNumber,
+      };
+    },
+  });
+  return { data };
+};
+export const useFetchAboutWhyChooseUs = () => {
+  const { data } = useQuery({
+    queryKey: ['aboutWhyChooseUs'],
+    queryFn: async () => {
+      const res = await client.getEntries({
+        content_type: 'aboutWhyChooseUs',
+      });
+      const { image1, paragraph, button, sections, title1, title2 } =
+        res.items[0].fields;
+      const img = image1?.fields?.file?.url;
+      return { img, paragraph, button, sections, title1, title2 };
+    },
+  });
+  return { data };
+};
