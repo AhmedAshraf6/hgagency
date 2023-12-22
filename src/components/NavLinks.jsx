@@ -4,7 +4,6 @@ const links = [
   { id: 3, url: '/aboutceo', text: 'about ceo' },
   { id: 4, url: '/services', text: 'services' },
   { id: 5, url: '/projects', text: 'projects' },
-  { id: 6, url: '/contact', text: 'contact' },
 ];
 import { NavLink } from 'react-router-dom';
 

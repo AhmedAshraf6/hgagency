@@ -36,10 +36,8 @@ const Navbar = ({ extraClassess }) => {
         </div>
         <div className='navbar-end'>
           {/* CART LINK*/}
-          <NavLink to='cart' className='btn btn-ghost btn-circle btn-md ml-4'>
-            <div className='indicator'>
-              <AiOutlineSearch className='h-6 w-6' />
-            </div>
+          <NavLink to='/contact' className='btn btn-primary  btn-md ml-4'>
+            contact Us
           </NavLink>
         </div>
       </div>
