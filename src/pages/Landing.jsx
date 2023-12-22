@@ -18,11 +18,17 @@ import {
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import VideoHome from '../components/VideoHome';
 import { useFetchHeroSection } from '../components/Api/fetchHomePage';
+import { Helmet } from 'react-helmet-async';
 
 const Landing = () => {
   const { data } = useFetchHeroSection();
   return (
     <>
+      <Helmet>
+        <title>HG Agency - Home</title>
+        <meta name='description' content='Hg Agency Marketing Group' />
+        <link rel='canonical' href='/' />
+      </Helmet>
       <div className='relative h-[89vh] grid place-items-center '>
         <video
           autoPlay

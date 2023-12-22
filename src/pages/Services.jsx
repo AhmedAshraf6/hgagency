@@ -7,6 +7,7 @@ import {
 } from '../components';
 import vid from '../assets/hg.mp4';
 import { useFetchServicesHero } from '../components/Api/fetchServices';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
   const breadcrumbs = [
@@ -17,6 +18,11 @@ const Services = () => {
 
   return (
     <>
+      <Helmet>
+        <title>HG Agency - Services</title>
+        <meta name='description' content='Hg Agency Marketing Group' />
+        <link rel='canonical' href='/services' />
+      </Helmet>
       <Navbar />
       <PageBanner
         title={data?.title}

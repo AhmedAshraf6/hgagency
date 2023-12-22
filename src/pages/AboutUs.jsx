@@ -8,6 +8,7 @@ import {
 } from '../components';
 import NeedHelp from '../components/NeedHelp';
 import { useFetchAboutHero } from '../components/Api/fetchAboutPage';
+import { Helmet } from 'react-helmet-async';
 
 const AboutUs = () => {
   const breadcrumbs = [
@@ -17,6 +18,11 @@ const AboutUs = () => {
   const { data } = useFetchAboutHero();
   return (
     <>
+      <Helmet>
+        <title>HG Agency - About Us</title>
+        <meta name='description' content='Hg Agency Marketing Group' />
+        <link rel='canonical' href='/aboutus' />
+      </Helmet>
       <Navbar />
       <PageBanner
         title={data?.title}
